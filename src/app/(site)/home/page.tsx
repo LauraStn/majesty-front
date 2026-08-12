@@ -7,13 +7,12 @@ export default function HomePage() {
   return (
     <div>
       <div
-        className="h-[650px] bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url(/images/hero-accueil.jpg)" }}
+        className="h-[630px] bg-cover bg-center bg-fixed bg-[url('/images/home-mobile.png')] md:bg-[url('/images/hero-accueil.jpg')]"
         role="img"
         aria-label="Intérieur chaleureux face au lac"
       />
 
-      <div className="flex justify-center px-5 pt-[18px] sm:px-8 md:px-12">
+      <div className="flex justify-center px-5 pt-[10px] sm:px-8 md:px-12">
         <Image
           src="/images/logo-hero.png"
           alt="Majesty Conciergerie"
@@ -21,30 +20,30 @@ export default function HomePage() {
           height={130}
           className="block h-auto w-[420px] max-w-[80vw] [mix-blend-mode:multiply]"
           priority
+          id="home-title"
         />
       </div>
-
-      <div className="mx-auto max-w-[1180px] px-5 pt-10 pb-[90px] text-center sm:px-8 md:px-12">
-        <span className="text-[10px] tracking-[0.3em] text-sage uppercase">
-          Haute-Savoie · Genève · Suisse romande
-        </span>
+      <div className=" flex justify-center">
+          <ScrollDownButton targetId="home-title" />
+        </div>
+      <div className="mx-auto max-w-[1180px] px-5 pb-[90px] text-center sm:px-8 md:px-12">
         <h1
-          id="home-title"
-          className="mx-auto mt-6 max-w-3xl text-balance font-serif text-6xl leading-[0.98] font-light sm:text-7xl md:text-8xl lg:text-[96px]"
+          
+          className="mx-auto mt-6 max-w-3xl pb-[15px] text-balance font-serif text-6xl leading-[0.98] font-light sm:text-7xl md:text-8xl lg:text-[96px]"
         >
           Votre location,
           <br />
           <em className="italic">tenue comme un hôtel</em>
         </h1>
-        <div className="mt-6 flex justify-center">
-          <ScrollDownButton targetId="home-title" />
-        </div>
-        <p className="mx-auto mt-7 max-w-[540px] text-lg leading-[1.7] font-light text-muted-1">
+        <span className="text-[10px] tracking-[0.3em] text-sage uppercase">
+          Haute-Savoie · Genève · Suisse romande
+        </span>
+        <p className="mx-auto mt-15 max-w-[540px] text-lg leading-[1.7] font-light text-muted-1">
           Nous gérons l&rsquo;intégralité de votre bien Airbnb et Booking —
           voyageurs, entretien, annonces, revenus. Vous n&rsquo;ouvrez plus une
           seule messagerie.
         </p>
-        <div className="mt-9 flex flex-wrap justify-center gap-3">
+        <div className="mt-15 flex flex-wrap justify-center gap-3">
           <GradientButton href="/contact">Nous contacter</GradientButton>
           <GradientButton href="/services" variant="outline">
             Découvrir nos services

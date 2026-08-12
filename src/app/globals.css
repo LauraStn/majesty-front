@@ -81,10 +81,6 @@ a {
   color: var(--color-ink);
 }
 
-a:hover {
-  color: var(--color-sage);
-}
-
 .bg-gold-gradient {
   background: var(--gradient-gold);
 }

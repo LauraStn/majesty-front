@@ -13,22 +13,21 @@ export default function ContactPage() {
   return (
     <div>
       <div
-        className="h-[650px] bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url(/images/hero-contact.jpg)" }}
+        className="h-[650px] bg-cover bg-center bg-fixed bg-[url('/images/contact-mobile.png')] md:bg-[url('/images/hero-contact.jpg')]"
         role="img"
         aria-label="Propriétaires consultant leurs annonces"
       />
-      <div className="mx-auto max-w-[1180px] px-5 pt-[40px] pb-[120px] sm:px-8 md:px-12">
+      <div className="mx-auto max-w-[1180px] px-5 pt-[20px] pb-[120px] sm:px-8 md:px-12">
         <h1
           id="contact-title"
-          className="font-serif text-5xl leading-[1.04] font-light sm:text-6xl lg:text-[64px]"
+          className="text-center font-serif text-5xl leading-[1.04] font-light sm:text-6xl lg:text-[64px]"
         >
           Nous contacter
         </h1>
-        <div className="mt-6 mb-2">
+        <div className="mt-6 mb-2 flex justify-center">
           <ScrollDownButton targetId="contact-title" />
         </div>
-        <p className="mt-4 text-[17px] leading-[1.7] font-light text-muted-1 md:whitespace-nowrap">
+        <p className="text-center text-[17px] leading-[1.7] font-light text-muted-1 md:whitespace-nowrap">
           Une question sur votre logement ? Écrivez-nous, nous répondons sous
           24 h ouvrées.
         </p>

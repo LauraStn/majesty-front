@@ -13,15 +13,14 @@ export default function PricingPage() {
   return (
     <div>
       <div
-        className="h-[650px] bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url(/images/hero-tarifs.jpg)" }}
+        className="h-[650px] bg-cover bg-center bg-fixed bg-[url('/images/pricing-mobile.png')] md:bg-[url('/images/hero-tarifs.jpg')]"
         role="img"
         aria-label="Mas en pierre avec vue sur la vallée"
       />
-      <div className="mx-auto max-w-[1180px] px-5 pt-[40px] pb-[150px] sm:px-8 md:px-12">
+      <div className="mx-auto max-w-[1180px] px-5 pt-[10px] pb-[150px] sm:px-8 md:px-12">
         <h1
           id="pricing-title"
-          className="text-center font-serif text-5xl pb-[40px] font-light sm:text-6xl lg:text-[74px]"
+          className="text-center font-serif text-5xl pb-[10px] font-light sm:text-6xl lg:text-[74px]"
         >
           Deux formules.
         </h1>
