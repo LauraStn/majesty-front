@@ -1,10 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { champs } from "@/lib/content";
+
+const MIN_FILL_TIME_MS = 1500;
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const mountedAt = useRef(Date.now());
 
   if (submitted) {
     return (
@@ -21,15 +24,34 @@ export default function ContactForm() {
 
   return (
     <form
-      className="rounded-[20px] bg-white px-8 py-11 shadow-[0_2px_6px_rgba(26,26,24,0.05),0_18px_40px_-12px_rgba(26,26,24,0.14)] sm:px-10"
+      className="relative rounded-[20px] bg-white px-8 py-11 shadow-[0_2px_6px_rgba(26,26,24,0.05),0_18px_40px_-12px_rgba(26,26,24,0.14)] sm:px-10"
       onSubmit={(e) => {
         e.preventDefault();
+        const form = e.currentTarget;
+        const honeypot = (
+          form.elements.namedItem("website") as HTMLInputElement | null
+        )?.value;
+        const isBot =
+          !!honeypot || Date.now() - mountedAt.current < MIN_FILL_TIME_MS;
+
+        if (!isBot) {
+          // TODO: envoyer les données du formulaire (API / service d'e-mail) ici.
+        }
+
         setSubmitted(true);
       }}
     >
       <h2 className="font-serif text-3xl font-light sm:text-4xl">
         Envoyer un message
       </h2>
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute -left-[9999px] h-0 w-0 opacity-0"
+      />
       <div className="mt-8 grid grid-cols-1 gap-[22px] sm:grid-cols-2">
         {champs.map((c) => (
           <label key={c.name} className="flex flex-col gap-2">
