@@ -3,6 +3,7 @@ export const nav = [
   { href: "/services", label: "Prestations" },
   { href: "/pricing", label: "Tarifs" },
   { href: "/partners", label: "Nos partenaires" },
+  { href: "/good-adresses", label: "Bonnes adresses" },
 ];
 
 export const kpis = [

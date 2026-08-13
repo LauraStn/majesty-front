@@ -5,11 +5,9 @@ import { useEffect, useRef, useState } from "react";
 export default function RevealOnScroll({
   children,
   className = "",
-  delay = 0,
 }: {
   children: React.ReactNode;
   className?: string;
-  delay?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -35,7 +33,6 @@ export default function RevealOnScroll({
     <div
       ref={ref}
       className={`${visible ? "animate-reveal" : "reveal-init"} ${className}`}
-      style={{ animationDelay: visible ? `${delay}s` : undefined }}
     >
       {children}
     </div>

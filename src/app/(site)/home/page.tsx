@@ -7,14 +7,14 @@ export default function HomePage() {
   return (
     <div>
       <div
-        className="h-[630px] bg-cover bg-center bg-fixed bg-[url('/images/home-mobile.png')] md:bg-[url('/images/hero-accueil.jpg')]"
+        className="h-[65vh] min-h-[380px] bg-cover bg-center bg-fixed bg-[url('/images/home-mobile.png')] md:h-[630px] md:bg-[url('/images/hero-accueil.jpg')]"
         role="img"
         aria-label="Intérieur chaleureux face au lac"
       />
 
       <div className="flex justify-center px-5 pt-[10px] sm:px-8 md:px-12">
         <Image
-          src="/images/logo-hero.png"
+          src="/images/logo-heros.png"
           alt="Majesty Conciergerie"
           width={420}
           height={130}

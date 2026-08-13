@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import GradientButton from "@/components/GradientButton";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ScrollDownButton from "@/components/ScrollDownButton";
@@ -14,7 +15,7 @@ export default function ServicesPage() {
   return (
     <div>
       <div
-        className="h-[650px] bg-cover bg-center bg-fixed bg-[url('/images/services-mobile.png')] md:bg-[url('/images/hero-prestations.jpg')]"
+        className="h-[65vh] min-h-[380px] bg-cover bg-center bg-[url('/images/services-mobile.png')] md:h-[650px] md:bg-[url('/images/hero-prestations.jpg')]"
         role="img"
         aria-label="Salon contemporain lumineux"
       />
@@ -36,22 +37,27 @@ export default function ServicesPage() {
           {services.map((s, i) => {
             const alt = i % 2 === 1;
             return (
-              <RevealOnScroll key={s.num} delay={i * 0.11}>
+              <RevealOnScroll key={s.num}>
                 <div
-                  className={`grid grid-cols-1 items-center gap-6 rounded-[22px] bg-white px-6 py-8 shadow-[0_1px_3px_rgba(26,26,24,0.04),0_14px_34px_-16px_rgba(26,26,24,0.14)] transition-[transform,box-shadow] duration-300 hover:translate-x-1.5 hover:shadow-[0_3px_8px_rgba(26,26,24,0.05),0_26px_54px_-18px_rgba(138,110,47,0.26)] sm:px-10 md:gap-10 ${
+                  className={`grid grid-cols-1 items-center gap-6 rounded-[22px] bg-white px-6 py-8 shadow-[0_1px_3px_rgba(26,26,24,0.04),0_14px_34px_-16px_rgba(26,26,24,0.14)] sm:px-10 md:gap-10 ${
                     alt
                       ? "md:grid-cols-[1fr_280px_180px]"
                       : "md:grid-cols-[180px_280px_1fr]"
                   }`}
                 >
                   <div
-                    className={`h-[140px] w-[140px] flex-none bg-contain bg-center bg-no-repeat md:h-[180px] md:w-[180px] ${
+                    className={`relative h-[140px] w-[140px] flex-none md:h-[180px] md:w-[180px] ${
                       alt ? "md:order-3 mx-auto md:mx-0" : "mx-auto md:mx-0"
                     }`}
-                    style={{ backgroundImage: `url(${s.img})` }}
-                    role="img"
-                    aria-label={s.titre}
-                  />
+                  >
+                    <Image
+                      src={s.img}
+                      alt={s.titre}
+                      fill
+                      sizes="(min-width: 768px) 180px, 140px"
+                      className="object-contain"
+                    />
+                  </div>
                   <h3
                     className={`font-serif text-2xl leading-[1.12] font-normal sm:text-[31px] ${
                       alt ? "md:order-2 md:text-right" : ""

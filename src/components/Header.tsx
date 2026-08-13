@@ -162,12 +162,12 @@ export default function Header() {
     <>
       <div
         id="site-header"
-        className="sticky top-0 z-30 backdrop-blur-md bg-header-bg"
+        className="sticky top-0 z-30 bg-header-bg"
       >
-        <div className="hidden flex-wrap items-center justify-between gap-4 px-5 py-[18px] sm:px-8 md:flex md:px-12">
-          <Link href="/" className="flex flex-none items-center">
+        <div className="hidden grid-cols-[1fr_auto_1fr] items-center gap-4 px-5 py-[18px] sm:px-8 md:grid md:px-12">
+          <Link href="/" className="flex flex-none items-center justify-self-start">
             <Image
-              src="/images/logo-header.jpg"
+              src="/images/logo-bgrmv.png"
               alt="Majesty Conciergerie"
               width={200}
               height={58}
@@ -176,7 +176,7 @@ export default function Header() {
             />
           </Link>
 
-          <div className="flex flex-1 flex-wrap items-center gap-1 rounded-full border border-border bg-white p-1 sm:flex-none">
+          <div className="flex flex-wrap items-center justify-center gap-1 rounded-full border border-border bg-white p-1 justify-self-center">
             {nav.map((n) => {
               const active = pathname === n.href;
               return (
@@ -195,7 +195,7 @@ export default function Header() {
             })}
           </div>
 
-          <div className="flex flex-none items-center gap-3.5">
+          <div className="flex flex-none items-center justify-self-end gap-3.5">
             <GradientCTA />
             <SocialLinks />
           </div>
@@ -220,8 +220,8 @@ export default function Header() {
             <Image
               src="/images/majesty-conciergerie-logo-mobil-nav.png"
               alt="Majesty Conciergerie"
-              width={40}
-              height={40}
+              width={129}
+              height={36}
               className="block h-9 w-auto"
               priority
             />

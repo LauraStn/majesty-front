@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <div>
       <div
-        className="h-[650px] bg-cover bg-center bg-fixed bg-[url('/images/contact-mobile.png')] md:bg-[url('/images/hero-contact.jpg')]"
+        className="h-[65vh] min-h-[380px] bg-cover bg-center bg-fixed bg-[url('/images/contact-mobile.png')] md:h-[650px] md:bg-[url('/images/hero-contact.jpg')]"
         role="img"
         aria-label="Propriétaires consultant leurs annonces"
       />

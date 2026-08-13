@@ -13,7 +13,7 @@ export default function PricingPage() {
   return (
     <div>
       <div
-        className="h-[650px] bg-cover bg-center bg-fixed bg-[url('/images/pricing-mobile.png')] md:bg-[url('/images/hero-tarifs.jpg')]"
+        className="h-[65vh] min-h-[380px] bg-cover bg-center bg-fixed bg-[url('/images/pricing-mobile.png')] md:h-[650px] md:bg-[url('/images/hero-tarifs.jpg')]"
         role="img"
         aria-label="Mas en pierre avec vue sur la vallée"
       />
@@ -36,7 +36,7 @@ export default function PricingPage() {
           {formules.map((f) => (
             <div
               key={f.nom}
-              className="flex flex-col gap-3.5 rounded-[20px] bg-white px-8 pt-[38px] pb-[34px] shadow-[0_2px_6px_rgba(26,26,24,0.05),0_18px_40px_-12px_rgba(26,26,24,0.14)] transition-[box-shadow,transform] duration-300 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(26,26,24,0.06),0_30px_60px_-14px_rgba(138,110,47,0.28)]"
+              className="flex flex-col gap-3.5 rounded-[20px] bg-white px-8 pt-[38px] pb-[34px] shadow-[0_2px_6px_rgba(26,26,24,0.05),0_18px_40px_-12px_rgba(26,26,24,0.14)]"
             >
               <div className="text-[10px] tracking-[0.24em] text-sage uppercase">
                 {f.nom}
