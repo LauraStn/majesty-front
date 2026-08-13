@@ -22,8 +22,6 @@ export default function RootPage() {
           Votre temps est précieux.
           <br />
           Vos exigences le sont encore davantage.
-          <br />
-          Nous nous occupons du reste
         </p>
         <h2 className="font-serif text-xl font-light tracking-[0.12em] text-white uppercase">
           Vivez. Nous nous occupons du reste
@@ -42,8 +40,6 @@ export default function RootPage() {
           Your time is precious.
           <br />
           Your standards even more so.
-          <br />
-          We take care of the rest
         </p>
         <h2 className="font-serif text-xl font-light tracking-[0.12em] text-white uppercase">
           Live. We take care of the rest
