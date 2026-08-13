@@ -23,14 +23,13 @@ export default function ServicesPage() {
           id="services-title"
           className="mx-auto max-w-3xl text-center font-serif text-5xl pb-[10px] leading-[1.02] font-light sm:text-6xl lg:text-[74px]"
         >
-          Tout est pris en charge.
+          Chaque détail compte.
         </h1>
         <div className="flex justify-center pb-6">
           <ScrollDownButton targetId="services-title" />
         </div>
         <p className="mx-auto mt-6 max-w-[520px] text-center text-lg leading-[1.7] font-light text-muted-1">
-          Sept domaines, un seul interlocuteur, aucune tâche laissée au
-          propriétaire.
+          Tout est entre nos mains.
         </p>
 
         <div className="mt-16 flex flex-col gap-[18px]">

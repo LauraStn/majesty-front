@@ -44,8 +44,7 @@ export default function HomePage() {
           seule messagerie.
         </p>
         <div className="mt-15 flex flex-wrap justify-center gap-3">
-          <GradientButton href="/contact">Nous contacter</GradientButton>
-          <GradientButton href="/services" variant="outline">
+          <GradientButton href="/services">
             Découvrir nos services
           </GradientButton>
         </div>

@@ -14,7 +14,6 @@ function ArrowDownIcon() {
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      cursor="pointer"
     >
       <path d="M12 4v16" />
       <path d="M6 14l6 6 6-6" />
@@ -67,7 +66,8 @@ export default function ScrollDownButton({ targetId }: { targetId: string }) {
       aria-label="Aller au contenu"
       aria-hidden={!visible}
       tabIndex={visible ? 0 : -1}
-      className={`flex h-12 w-12 items-center justify-center rounded-full bg-gold-gradient text-ink shadow-[0_1px_3px_rgba(26,26,24,0.04),0_14px_34px_-16px_rgba(26,26,24,0.14)] transition-[opacity,transform,box-shadow] duration-500 ease-out hover:shadow-[0_3px_8px_rgba(26,26,24,0.05),0_26px_54px_-18px_rgba(138,110,47,0.26)] ${
+      
+      className={`flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-gold-gradient text-ink shadow-[0_1px_3px_rgba(26,26,24,0.04),0_14px_34px_-16px_rgba(26,26,24,0.14)] transition-[opacity,transform,box-shadow] duration-500 ease-out hover:shadow-[0_3px_8px_rgba(26,26,24,0.05),0_26px_54px_-18px_rgba(138,110,47,0.26)] ${
         visible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none -translate-y-2 opacity-0"

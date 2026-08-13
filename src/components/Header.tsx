@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,31 +9,44 @@ import { nav } from "@/lib/content";
 function FacebookIcon() {
   return (
     <svg
-      width="17"
-      height="17"
-      viewBox="0 0 24 24"
-      fill="currentColor"
+      width="20"
+      height="20"
+      viewBox="0 0 448 512"
       aria-hidden="true"
     >
-      <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.95h-1.51c-1.49 0-1.96.93-1.96 1.89v2.27h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z" />
+      <path
+        fill="#1877F2"
+        d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+      />
     </svg>
   );
 }
 
 function InstagramIcon() {
+  const gradientId = useId();
   return (
-    <svg
-      width="17"
-      height="17"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      aria-hidden="true"
-    >
-      <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" />
-      <circle cx="12" cy="12" r="4.4" />
-      <circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none" />
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      <defs>
+        <linearGradient id={gradientId} x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#FFDD55" />
+          <stop offset="35%" stopColor="#FF543E" />
+          <stop offset="65%" stopColor="#C837AB" />
+          <stop offset="100%" stopColor="#5851DB" />
+        </linearGradient>
+      </defs>
+      <rect width="24" height="24" rx="6.5" fill={`url(#${gradientId})`} />
+      <rect
+        x="4.8"
+        y="4.8"
+        width="14.4"
+        height="14.4"
+        rx="4.2"
+        fill="none"
+        stroke="#fff"
+        strokeWidth="1.6"
+      />
+      <circle cx="12" cy="12" r="3.6" fill="none" stroke="#fff" strokeWidth="1.6" />
+      <circle cx="16.3" cy="7.7" r="1.05" fill="#fff" />
     </svg>
   );
 }
@@ -41,13 +54,15 @@ function InstagramIcon() {
 function LinkedInIcon() {
   return (
     <svg
-      width="17"
-      height="17"
-      viewBox="0 0 24 24"
-      fill="currentColor"
+      width="20"
+      height="20"
+      viewBox="0 0 448 512"
       aria-hidden="true"
     >
-      <path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4V9z" />
+      <path
+        fill="#0A66C2"
+        d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3C448 46.5 433.6 32 416 32zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+      />
     </svg>
   );
 }
@@ -104,21 +119,21 @@ function SocialLinks() {
       <a
         href="#0"
         aria-label="Facebook"
-        className="flex h-[30px] w-[30px] items-center justify-center rounded-full text-ink hover:text-sage"
+        className="flex h-[30px] w-[30px] items-center justify-center rounded-full transition-opacity hover:opacity-75"
       >
         <FacebookIcon />
       </a>
       <a
         href="#0"
         aria-label="Instagram"
-        className="flex h-[30px] w-[30px] items-center justify-center rounded-full text-ink hover:text-sage"
+        className="flex h-[30px] w-[30px] items-center justify-center rounded-full transition-opacity hover:opacity-75"
       >
         <InstagramIcon />
       </a>
       <a
         href="#0"
         aria-label="LinkedIn"
-        className="flex h-[30px] w-[30px] items-center justify-center rounded-full text-ink hover:text-sage"
+        className="flex h-[30px] w-[30px] items-center justify-center rounded-full transition-opacity hover:opacity-75"
       >
         <LinkedInIcon />
       </a>
