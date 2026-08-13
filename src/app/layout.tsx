@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
 
@@ -30,6 +30,10 @@ export const metadata: Metadata = {
     apple: "/images/favicon4/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
+};
+
+export const viewport: Viewport = {
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
