@@ -16,7 +16,7 @@ export default function RootPage() {
       />
       <div className="relative z-10 flex max-w-xl flex-col items-center gap-3">
         <h2 className="font-serif text-xl font-light tracking-[0.12em] text-white uppercase">
-          Vous aviez mieux à faire.
+          Vous avez mieux à faire.
         </h2>
         <p className="text-sm leading-[1.7] font-light text-white/80">
           Votre temps est précieux.
@@ -34,7 +34,7 @@ export default function RootPage() {
       </div>
       <div className="relative z-10 flex max-w-xl flex-col items-center gap-3">
         <h2 className="font-serif text-xl font-light tracking-[0.12em] text-white uppercase">
-          You had better things to do.
+          You have better things to do.
         </h2>
         <p className="text-sm leading-[1.7] font-light text-white/80">
           Your time is precious.
