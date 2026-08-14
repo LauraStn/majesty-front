@@ -16,8 +16,8 @@ export default function HomePage() {
         <Image
           src="/images/logo-heros.png"
           alt="Majesty Conciergerie"
-          width={420}
-          height={130}
+          width={1439}
+          height={404}
           className="block h-auto w-[420px] max-w-[80vw] [mix-blend-mode:multiply]"
           priority
           id="home-title"
@@ -83,13 +83,15 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <Image
-            src="/images/terrasse-villa.jpg"
-            alt="Terrasse d'une villa au coucher du soleil"
-            width={800}
-            height={560}
-            className="block h-[560px] w-full rounded-[20px] object-cover"
-          />
+          <div className="relative h-[560px] w-full">
+            <Image
+              src="/images/terrasse-villa.jpg"
+              alt="Terrasse d'une villa au coucher du soleil"
+              fill
+              sizes="(min-width: 768px) 45vw, 100vw"
+              className="rounded-[20px] object-cover"
+            />
+          </div>
         </div>
       </div>
 

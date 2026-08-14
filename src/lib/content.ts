@@ -2,8 +2,8 @@ export const nav = [
   { href: "/home", label: "Accueil" },
   { href: "/services", label: "Prestations" },
   { href: "/pricing", label: "Tarifs" },
-  { href: "/partners", label: "Nos partenaires" },
-  { href: "/good-adresses", label: "Bonnes adresses" },
+  // { href: "/partners", label: "Nos partenaires" },
+  // { href: "/good-adresses", label: "Bonnes adresses" },
 ];
 
 export const kpis = [

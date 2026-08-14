@@ -169,8 +169,8 @@ export default function Header() {
             <Image
               src="/images/logo-bgrmv.png"
               alt="Majesty Conciergerie"
-              width={200}
-              height={58}
+              width={900}
+              height={684}
               className="block h-[58px] w-auto [mix-blend-mode:multiply]"
               priority
             />
