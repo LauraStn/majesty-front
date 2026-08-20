@@ -24,9 +24,11 @@ export default function ContactPage() {
         >
           Nous contacter
         </h1>
-        <div className="mt-6 mb-2 flex justify-center">
-          <ScrollDownButton targetId="contact-title" />
-        </div>
+        <ScrollDownButton
+          targetId="contact-title"
+          expandedClassName="mt-6 mb-2 h-12"
+          collapsedClassName="mt-0 mb-0 h-0"
+        />
         <p className="text-center text-[17px] leading-[1.7] font-light text-muted-1 md:whitespace-nowrap">
           Une question sur votre logement ? Écrivez-nous, nous répondons dans les meilleurs délais.
         </p>

@@ -23,9 +23,11 @@ export default function HomePage() {
           id="home-title"
         />
       </div>
-      <div className=" flex justify-center">
-          <ScrollDownButton targetId="home-title" />
-        </div>
+      <ScrollDownButton
+        targetId="home-title"
+        expandedClassName="h-12"
+        collapsedClassName="h-0"
+      />
       <div className="mx-auto max-w-[1180px] px-5 pb-[90px] text-center sm:px-8 md:px-12">
         <h1
           

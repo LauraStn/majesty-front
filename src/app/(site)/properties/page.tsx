@@ -26,9 +26,7 @@ export default function PropertiesPage() {
         >
           Ils nous font confiance.
         </h1>
-        <div className="flex justify-center pb-6">
-          <ScrollDownButton targetId="properties-title" />
-        </div>
+        <ScrollDownButton targetId="properties-title" />
         <p className="mx-auto mt-5 max-w-[560px] text-center text-lg leading-[1.7] font-light text-muted-1">
           Un aperçu des logements confiés à Majesty Conciergerie, entre
           Annecy, Chamonix et Genève.

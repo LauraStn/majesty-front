@@ -23,9 +23,7 @@ export default function PricingPage() {
         >
           Trois formules.
         </h1>
-        <div className="flex justify-center pb-6">
-          <ScrollDownButton targetId="pricing-title" />
-        </div>
+        <ScrollDownButton targetId="pricing-title" />
         <p className="mx-auto mt-5 max-w-[520px] text-center text-lg leading-[1.7] font-light text-muted-1">
           Une commission sur les revenus encaissés. Pas d&rsquo;abonnement, pas
           de frais d&rsquo;entrée.

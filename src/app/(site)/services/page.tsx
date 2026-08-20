@@ -26,9 +26,7 @@ export default function ServicesPage() {
         >
           Chaque détail compte.
         </h1>
-        <div className="flex justify-center pb-6">
-          <ScrollDownButton targetId="services-title" />
-        </div>
+        <ScrollDownButton targetId="services-title" />
         <p className="mx-auto mt-6 max-w-[520px] text-center text-lg leading-[1.7] font-light text-muted-1">
           Tout est entre nos mains.
         </p>

@@ -40,7 +40,15 @@ function smoothScrollTo(top: number, duration = 900) {
   requestAnimationFrame(step);
 }
 
-export default function ScrollDownButton({ targetId }: { targetId: string }) {
+export default function ScrollDownButton({
+  targetId,
+  expandedClassName = "mb-6 h-12",
+  collapsedClassName = "mb-0 h-0",
+}: {
+  targetId: string;
+  expandedClassName?: string;
+  collapsedClassName?: string;
+}) {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -60,20 +68,25 @@ export default function ScrollDownButton({ targetId }: { targetId: string }) {
   };
 
   return (
-    <button
-      type="button"
-      onClick={handleClick}
-      aria-label="Aller au contenu"
-      aria-hidden={!visible}
-      tabIndex={visible ? 0 : -1}
-      
-      className={`flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-gold-gradient text-ink shadow-[0_1px_3px_rgba(26,26,24,0.04),0_14px_34px_-16px_rgba(26,26,24,0.14)] transition-[opacity,transform,box-shadow] duration-500 ease-out hover:shadow-[0_3px_8px_rgba(26,26,24,0.05),0_26px_54px_-18px_rgba(138,110,47,0.26)] ${
-        visible
-          ? "translate-y-0 opacity-100"
-          : "pointer-events-none -translate-y-2 opacity-0"
+    <div
+      className={`flex justify-center overflow-hidden transition-[height,margin] duration-500 ease-out ${
+        visible ? expandedClassName : collapsedClassName
       }`}
     >
-      <ArrowDownIcon />
-    </button>
+      <button
+        type="button"
+        onClick={handleClick}
+        aria-label="Aller au contenu"
+        aria-hidden={!visible}
+        tabIndex={visible ? 0 : -1}
+        className={`flex h-12 w-12 flex-none cursor-pointer items-center justify-center rounded-full bg-gold-gradient text-ink shadow-[0_1px_3px_rgba(26,26,24,0.04),0_14px_34px_-16px_rgba(26,26,24,0.14)] transition-[opacity,transform,box-shadow] duration-500 ease-out hover:shadow-[0_3px_8px_rgba(26,26,24,0.05),0_26px_54px_-18px_rgba(138,110,47,0.26)] ${
+          visible
+            ? "translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-2 opacity-0"
+        }`}
+      >
+        <ArrowDownIcon />
+      </button>
+    </div>
   );
 }
