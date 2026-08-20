@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import GradientButton from "@/components/GradientButton";
 import ScrollDownButton from "@/components/ScrollDownButton";
 import { formules, options } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Tarifs — Majesty Conciergerie",
   description:
-    "Deux formules, une commission sur les revenus encaissés. Pas d'abonnement, pas de frais d'entrée.",
+    "Trois formules, une commission sur les revenus encaissés. Pas d'abonnement, pas de frais d'entrée.",
 };
 
 export default function PricingPage() {
@@ -22,7 +21,7 @@ export default function PricingPage() {
           id="pricing-title"
           className="text-center font-serif text-5xl pb-[10px] font-light sm:text-6xl lg:text-[74px]"
         >
-          Deux formules.
+          Trois formules.
         </h1>
         <div className="flex justify-center pb-6">
           <ScrollDownButton targetId="pricing-title" />
@@ -32,19 +31,22 @@ export default function PricingPage() {
           de frais d&rsquo;entrée.
         </p>
 
-        <div className="mx-auto mt-16 grid max-w-[820px] grid-cols-1 gap-7 sm:grid-cols-2">
+        <div className="mx-auto mt-16 grid max-w-[1100px] grid-cols-1 gap-7 sm:grid-cols-3">
           {formules.map((f) => (
             <div
               key={f.nom}
               className="flex flex-col gap-3.5 rounded-[20px] bg-white px-8 pt-[38px] pb-[34px] shadow-[0_2px_6px_rgba(26,26,24,0.05),0_18px_40px_-12px_rgba(26,26,24,0.14)]"
             >
-              <div className="text-[10px] tracking-[0.24em] text-sage uppercase">
+              <div
+                className="mx-auto inline-flex w-fit cursor-default items-center justify-center rounded-full px-15 py-3 text-xs tracking-[0.24em] text-ink uppercase"
+                style={{ background: "var(--gradient-gold)" }}
+              >
                 {f.nom}
               </div>
-              <div className="font-serif text-6xl leading-[0.98] font-light sm:text-7xl">
+              <div className="font-serif text-center text-6xl leading-[0.98] font-light sm:text-7xl">
                 {f.prix}
               </div>
-              <div className="border-b border-border pb-[18px] text-[10px] tracking-[0.16em] text-muted-4 uppercase">
+              <div className="border-b text-center border-border pb-[18px] text-[10px] tracking-[0.16em] text-muted-4 uppercase">
                 des revenus locatifs
               </div>
               {f.inclus.map((i) => (
@@ -56,9 +58,6 @@ export default function PricingPage() {
                   <span>{i}</span>
                 </div>
               ))}
-              <GradientButton className="mt-auto w-full py-3.5 text-[10px]">
-                Choisir
-              </GradientButton>
             </div>
           ))}
         </div>
@@ -70,10 +69,12 @@ export default function PricingPage() {
           {options.map((o) => (
             <div
               key={o.nom}
-              className="flex items-baseline justify-between gap-4 border-t border-border py-[18px]"
+              className="flex items-start justify-between gap-4 border-t border-border py-[18px]"
             >
               <span className="text-base font-light">{o.nom}</span>
-              <span className="font-serif text-xl">{o.prix}</span>
+              <span className="max-w-[55%] text-right font-serif text-xl">
+                {o.prix}
+              </span>
             </div>
           ))}
         </div>

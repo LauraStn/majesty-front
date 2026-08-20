@@ -3,7 +3,8 @@ export const nav = [
   { href: "/services", label: "Prestations" },
   { href: "/pricing", label: "Tarifs" },
   // { href: "/partners", label: "Nos partenaires" },
-  // { href: "/good-adresses", label: "Bonnes adresses" },
+  // { href: "/recommendations", label: "Nos recommandations" },
+  { href: "/properties", label: "Nos biens" },
 ];
 
 export const kpis = [
@@ -89,39 +90,149 @@ export const services = [
 
 export const formules = [
   {
-    nom: "Confort",
+    nom: "Standard",
     prix: "20 %",
     inclus: [
-      "Annonces et tarification, voyageurs 7 j/7",
-      "Ménage entre chaque séjour",
-      "Linge fourni et blanchi",
-      "Accueil en personne",
-      "Réassort des consommables",
-      "Rapport mensuel de revenus",
+      "La rédaction de l'annonce",
+      "Réponse 7 j/7",
+      "Gestion des réservations",
+      "Accueil et disponibilité pour les voyageurs",
+      "États des lieux",
+      "Blanchisserie",
+      "Rapports mensuels des revenus",
     ],
   },
   {
-    nom: "Signature",
+    nom: "Confort",
     prix: "25 %",
     inclus: [
-      "Tout Confort",
-      "Annonces et tarification",
-      "Voyageurs 7 j/7",
-      "Interlocuteur dédié joignable",
-      "Coordination des travaux",
+      "Tout le Standard",
+      "Frais de mise en place du logement",
+      "Coordination des travaux et de la maintenance",
       "Entretien extérieur et jardin",
-      "Conciergerie sur mesure",
+      "Home staging",
+    ],
+  },
+  {
+    nom: "Premium",
+    prix: "30 %",
+    inclus: [
+      "Tout le Confort",
+      "Literie et blanchisserie hôtelière",
+      "Photos professionnelles",
+      "Traiteur (panier d'accueil, brunch, cuisinier sur place, etc.)",
     ],
   },
 ];
 
 export const options = [
-  { nom: "Shooting photo professionnel", prix: "390 €" },
-  { nom: "Ménage grand format (plus de 150 m²)", prix: "145 €" },
-  { nom: "Accueil de nuit après 23 h", prix: "60 €" },
-  { nom: "Ouverture et fermeture saisonnière", prix: "250 €" },
-  { nom: "Entretien du jardin", prix: "110 € / mois" },
-  { nom: "Déneigement des accès", prix: "sur demande" },
+  { nom: "Rédaction d'annonce", prix: "À partir de 60 € / annonce" },
+  { nom: "Rapport mensuel des revenus", prix: "150 €" },
+  { nom: "Conseils en aménagement (home staging)", prix: "Devis à partir de 50 €" },
+  { nom: "Photos professionnelles", prix: "Devis à effectuer selon le bien" },
+  { nom: "Literie et blanchisserie", prix: "Devis selon besoin" },
+  { nom: "Traiteur", prix: "Devis selon prestations" },
+  { nom: "Mise en place du logement", prix: "129 €" },
+  { nom: "Home sitting", prix: "Abonnement par mois à convenir selon besoin" },
+];
+
+export const biens = [
+  {
+    nom: "Chalet Alpina",
+    lieu: "Chamonix-Mont-Blanc",
+    type: "Chalet",
+    chambres: 4,
+    voyageurs: 8,
+    tags: ["Vue Mont-Blanc", "Sauna", "Cheminée"],
+    texte:
+      "Chalet en bois et pierre au pied des pistes, vue directe sur le massif du Mont-Blanc.",
+    imgExt: "/images/properties/chalet-alpina-ext.jpg",
+    imgInt: "/images/properties/chalet-alpina-int.jpg",
+  },
+  {
+    nom: "Chalet Cristal",
+    lieu: "Megève",
+    type: "Chalet",
+    chambres: 3,
+    voyageurs: 6,
+    tags: ["Ski aux pieds", "Terrasse plein sud", "Fondue sur demande"],
+    texte:
+      "Ambiance montagnarde raffinée à deux pas du centre de Megève, ski aux pieds l'hiver.",
+    imgExt: "/images/properties/chalet-cristal-ext.jpg",
+    imgInt: "/images/properties/chalet-cristal-int.jpg",
+  },
+  {
+    nom: "Villa Léman",
+    lieu: "Cologny, Genève",
+    type: "Villa",
+    chambres: 5,
+    voyageurs: 10,
+    tags: ["Bord du lac", "Piscine", "Jardin clos"],
+    texte:
+      "Villa contemporaine les pieds dans l'eau, jardin arboré et accès privé au lac Léman.",
+    imgExt: "/images/properties/villa-leman-ext.jpg",
+    imgInt: "/images/properties/villa-leman-int.jpg",
+  },
+  {
+    nom: "Villa Panorama",
+    lieu: "Saint-Gervais-les-Bains",
+    type: "Villa",
+    chambres: 4,
+    voyageurs: 8,
+    tags: ["Jacuzzi extérieur", "Vue vallée", "Home cinéma"],
+    texte:
+      "Vue dégagée sur la vallée, jacuzzi extérieur chauffé toute l'année et grand séjour lumineux.",
+    imgExt: "/images/properties/villa-panorama-ext.jpg",
+    imgInt: "/images/properties/villa-panorama-int.jpg",
+  },
+  {
+    nom: "Appartement du Lac",
+    lieu: "Annecy",
+    type: "Appartement",
+    chambres: 2,
+    voyageurs: 4,
+    tags: ["Vue lac d'Annecy", "Balcon", "Proche vieille ville"],
+    texte:
+      "Appartement lumineux à deux pas des rives du lac, balcon filant et vue dégagée.",
+    imgExt: "/images/properties/appt-lac-ext.jpg",
+    imgInt: "/images/properties/appt-lac-int.jpg",
+  },
+  {
+    nom: "Appartement Vieille Ville",
+    lieu: "Annecy",
+    type: "Appartement",
+    chambres: 1,
+    voyageurs: 2,
+    tags: ["Vieille ville", "Poutres apparentes", "Canaux à pied"],
+    texte:
+      "Pied-à-terre de charme au cœur de la vieille ville, entre canaux et façades colorées.",
+    imgExt: "/images/properties/appt-vieilleville-ext.jpg",
+    imgInt: "/images/properties/appt-vieilleville-int.jpg",
+  },
+  {
+    nom: "Chalet Étoile",
+    lieu: "Évian-les-Bains",
+    type: "Chalet",
+    chambres: 4,
+    voyageurs: 8,
+    tags: ["Vue sur le lac Léman", "Jardin arboré", "Accès plage privée"],
+    texte:
+      "Chalet traditionnel posé face au lac, jardin arboré et vue imprenable sur les sommets.",
+    imgExt: "/images/properties/chalet-etoile-ext.jpg",
+    imgInt: "/images/properties/chalet-etoile-int.jpg",
+  },
+  {
+    nom: "Appartement Ouchy",
+    lieu: "Lausanne",
+    type: "Appartement",
+    chambres: 2,
+    voyageurs: 4,
+    tags: ["Vue lac Léman", "Balcon", "Proche embarcadère"],
+    texte:
+      "Appartement contemporain à deux pas du port d'Ouchy, balcon face au lac.",
+    imgExt: "/images/properties/appt-ouchy-ext.jpg",
+    imgInt: "/images/properties/appt-ouchy-int.jpg",
+  },
 ];
 
 export const valeurs = [

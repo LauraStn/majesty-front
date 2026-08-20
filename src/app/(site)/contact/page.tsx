@@ -6,7 +6,7 @@ import ScrollDownButton from "@/components/ScrollDownButton";
 export const metadata: Metadata = {
   title: "Contact — Majesty Conciergerie",
   description:
-    "Une question sur votre logement ? Écrivez-nous, nous répondons sous 24 h ouvrées.",
+    "Une question sur votre logement ? Écrivez-nous, nous répondons dans les meilleurs délais.",
 };
 
 export default function ContactPage() {
@@ -28,8 +28,7 @@ export default function ContactPage() {
           <ScrollDownButton targetId="contact-title" />
         </div>
         <p className="text-center text-[17px] leading-[1.7] font-light text-muted-1 md:whitespace-nowrap">
-          Une question sur votre logement ? Écrivez-nous, nous répondons sous
-          24 h ouvrées.
+          Une question sur votre logement ? Écrivez-nous, nous répondons dans les meilleurs délais.
         </p>
 
         <div className="mt-16 grid grid-cols-1 items-start gap-16 md:grid-cols-[0.85fr_1.15fr] md:gap-20">
