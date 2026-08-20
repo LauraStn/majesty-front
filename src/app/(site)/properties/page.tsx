@@ -15,7 +15,7 @@ export default function PropertiesPage() {
   return (
     <div>
       <div
-        className="h-[65vh] min-h-[380px] bg-cover bg-center bg-fixed bg-[url('/images/hero-properties.png')] md:h-[650px]"
+        className="h-[65vh] min-h-[380px] bg-cover bg-center bg-fixed bg-[url('/images/properties-mobile.png')] md:h-[650px] md:bg-[url('/images/hero-properties.png')]"
         role="img"
         aria-label="Villa au bord du lac Léman"
       />

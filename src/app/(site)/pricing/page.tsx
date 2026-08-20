@@ -5,7 +5,7 @@ import { formules, options } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Tarifs — Majesty Conciergerie",
   description:
-    "Trois formules, une commission sur les revenus encaissés. Pas d'abonnement, pas de frais d'entrée.",
+    "Trois formules, une commission sur les revenus encaissés.",
 };
 
 export default function PricingPage() {
