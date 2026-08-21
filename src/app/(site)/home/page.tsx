@@ -29,10 +29,7 @@ export default function HomePage() {
         collapsedClassName="h-0"
       />
       <div className="mx-auto max-w-[1180px] px-5 pb-[90px] text-center sm:px-8 md:px-12">
-        <h1
-          
-          className="mx-auto mt-6 max-w-3xl pb-[15px] text-balance font-serif text-6xl leading-[0.98] font-light sm:text-7xl md:text-8xl lg:text-[96px]"
-        >
+        <h1 className="mx-auto mt-6 max-w-3xl pb-[15px] text-balance font-serif text-6xl leading-[0.98] font-light sm:text-7xl md:text-8xl lg:text-[96px]">
           Votre location,
           <br />
           <em className="italic">tenue comme un hôtel</em>
@@ -52,40 +49,42 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1180px] px-5 sm:px-8 md:px-12">
+      <div className="mx-auto max-w-[1280px] px-5 sm:px-8 md:px-12">
         <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-[1.15fr_0.85fr] md:gap-[70px]">
           <div className="flex flex-col gap-[30px]">
             <h2 className="font-serif text-5xl leading-[1.02] font-light sm:text-6xl lg:text-[62px]">
-              Petite maison,
+              L&rsquo;hôtellerie dans l&rsquo;âme,
               <br />
-              standard hôtelier.
+              l&rsquo;immobilier par passion.
             </h2>
-            <p className="max-w-[560px] text-[17px] leading-[1.85] font-light text-muted-1">
-              Majesty Conciergerie gère quarante-deux logements entre Annecy,
-              Chamonix, Genève et Lausanne. Six personnes, salariées. Nous
-              limitons volontairement le nombre de mandats : au-delà,
-              l&rsquo;attention se dilue.
+            <p className="max-w-[560px] text-[16px] leading-[1.85] font-light text-muted-1">
+              Mon parcours a commencé dans l&rsquo;hôtellerie, un univers où
+              j&rsquo;ai appris l&rsquo;excellence du service, le sens du détail
+              et l&rsquo;importance d&rsquo;offrir une expérience irréprochable
+              à chaque client.
             </p>
-            <p className="max-w-[560px] text-[17px] leading-[1.85] font-light text-muted-1">
-              Chaque propriétaire dispose d&rsquo;un interlocuteur unique,
-              joignable directement, qui connaît son logement, ses voisins et
-              ses contraintes. Un rapport mensuel remplace les échanges
-              inutiles.
+            <p className="max-w-[560px] text-[16px] leading-[1.85] font-light text-muted-1">
+              Animés par une passion commune pour l&rsquo;immobilier et
+              l&rsquo;exigence du service, nous avons fondé Majesty Conciergerie
+              avec une ambition simple : proposer aux propriétaires une gestion
+              haut de gamme inspirée des meilleurs standards de
+              l&rsquo;hôtellerie.
+            </p>
+            <p className="max-w-[560px] text-[16px] leading-[1.85] font-light text-muted-1">
+              En réunissant nos compétences et nos expériences, nous avons créé
+              une conciergerie où chaque bien bénéficie d&rsquo;un suivi
+              rigoureux, d&rsquo;une communication transparente et d&rsquo;un
+              accompagnement personnalisé. Notre objectif est simple : valoriser
+              votre bien et offrir à vos voyageurs une expérience
+              d&rsquo;exception.
             </p>
             <div className="mt-1 flex items-center gap-3.5">
-              <Image
-                src="/images/founder-avatar.png"
-                alt="Faouzi M'Madi"
-                width={40}
-                height={40}
-                className="block h-10 w-10 flex-none rounded-full object-cover object-[50%_25%]"
-              />
-              <div className="text-[11px] tracking-[0.18em] text-muted-4 uppercase">
-                Faouzi M&rsquo;Madi — fondateur
+              <div className="text-[13px] tracking-[0.18em] text-muted-4 uppercase">
+                — Les fondateurs de Majesty Conciergerie
               </div>
             </div>
           </div>
-          <div className="relative h-[560px] w-full">
+          <div className="relative h-[660px] w-full">
             <Image
               src="/images/terrasse-villa.jpg"
               alt="Terrasse d'une villa au coucher du soleil"
@@ -97,7 +96,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1180px] px-5 py-[90px] sm:px-8 md:px-12">
+      <div className="mx-auto max-w-[1280px] px-5 py-[90px] sm:px-8 md:px-12">
         <h2 className="mb-11 font-serif text-4xl font-light">Fonctionnement</h2>
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {etapes.map((e) => (
@@ -105,7 +104,9 @@ export default function HomePage() {
               <div className="font-serif text-sm tracking-[0.14em] text-sage">
                 {e.num}
               </div>
-              <h3 className="mt-2 font-serif text-2xl font-normal">{e.titre}</h3>
+              <h3 className="mt-2 font-serif text-2xl font-normal">
+                {e.titre}
+              </h3>
               <p className="mt-2 text-sm leading-[1.7] font-light text-muted-2">
                 {e.texte}
               </p>

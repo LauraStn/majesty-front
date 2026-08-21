@@ -235,21 +235,6 @@ export const biens = [
   },
 ];
 
-export const valeurs = [
-  {
-    titre: "Discrétion",
-    texte: "Votre bien, vos revenus et vos voyageurs ne sortent jamais de notre cadre de confidentialité.",
-  },
-  {
-    titre: "Exigence",
-    texte: "Équipes salariées, protocoles écrits, contrôles photographiques à chaque passage.",
-  },
-  {
-    titre: "Limite",
-    texte: "Nombre de mandats plafonné pour préserver le niveau de service promis.",
-  },
-];
-
 export const champs = [
   { name: "nom", label: "Prénom et nom", ph: "Hélène Marchand" },
   { name: "email", label: "E-mail", ph: "helene.marchand@mail.com" },
